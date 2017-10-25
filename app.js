@@ -16,7 +16,7 @@ const users = require('./routes/users');
 
 // Passport Config
 require('./config/passport')(passport);
-// DB config
+// DB Config
 const db = require('./config/database');
 
 // Map global promise - get rid of warning
@@ -84,7 +84,7 @@ app.get('/about', (req, res) => {
 app.use('/ideas', ideas);
 app.use('/users', users);
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
     console.log(`Server started on port ${port}`);
