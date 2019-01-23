@@ -6,8 +6,8 @@
     "scripts": {
         "start": "node app.js"
     },
-    "emgines":{
-        "node":"10.6.0"
+    "emgines": {
+        "node": "10.6.0"
     },
     "author": "isma",
     "license": "ISC",
@@ -21,6 +21,7 @@
         "express-session": "^1.15.6",
         "hbs": "^4.0.1",
         "helmet": "^3.13.0",
+        "jshint": "^2.9.6",
         "method-override": "^2.3.10",
         "mongoose": "^4.12.3",
         "passport": "^0.4.0",
