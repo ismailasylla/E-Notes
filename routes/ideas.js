@@ -63,7 +63,7 @@ router.post('/', ensureAuthenticated, (req, res) => {
       user: req.user.id
     };
     new Idea(newUser).save().then(idea => {
-      req.flash('success_msg', 'Note added');
+      req.flash('success_msg', 'Video idea added');
       res.redirect('/ideas');
     });
   }
@@ -79,7 +79,7 @@ router.put('/:id', ensureAuthenticated, (req, res) => {
     idea.details = req.body.details;
 
     idea.save().then(idea => {
-      req.flash('success_msg', 'Note updated');
+      req.flash('success_msg', 'Video idea updated');
       res.redirect('/ideas');
     });
   });
@@ -88,7 +88,7 @@ router.put('/:id', ensureAuthenticated, (req, res) => {
 // Delete Idea
 router.delete('/:id', ensureAuthenticated, (req, res) => {
   Idea.remove({ _id: req.params.id }).then(() => {
-    req.flash('success_msg', 'Note removed');
+    req.flash('success_msg', 'Video idea removed');
     res.redirect('/ideas');
   });
 });
